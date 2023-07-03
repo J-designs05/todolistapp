@@ -1,0 +1,225 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: helvtica, Arial;
+    margin: 0 20px;
+    padding: 0;
+    background-image: radial-gradient(circle at 1px 1px, darkslategray 1px, transparent 0);
+    background-size: 40px 40px;
+    background-position: -19px -19px;
+    overflow-y: hidden;
+    position: fixed;
+    width: 98%;
+    height: 100vh;
+}
+main{
+    display: flex;
+    width: 95%;
+    margin: 20px auto 20px auto;
+}
+html{
+    padding: 0;
+    margin: 0;
+}
+
+
+#add {
+    background-color: red;
+    border: 0;
+    color: white;
+    padding: 10px 10px;
+    padding-right: 40px;
+    cursor: pointer;
+    margin-top: 35px;
+    
+}
+
+.remove {
+    margin-top: 11px;
+    background-color: red;
+    clear: both;
+    padding-right: 20px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    text-align: center;
+    margin-left: auto;
+    height: 20px;
+}
+#input{
+    width: 35%;
+    display: inline-block;
+    margin-top: 0;
+
+}
+
+.container {
+    height: 35vh;
+    text-align: center;
+    background-color: darkslategray;
+    margin: 20px 0 0 0;
+    border-radius: 25px;
+    overflow-x: hidden;
+    overflow-y: hidden;  
+}
+
+
+ul{
+    list-style: none;
+    line-height: 35px;
+    box-sizing: 20px;
+    margin-left: -20px;
+    margin-right: 20px;
+}
+li{
+    padding: 5px 20px;
+    display: flex;
+
+}
+li:nth-child(even){
+    background-color: gray;
+}
+li:nth-child(odd){
+    background-color: dimgray;
+}
+
+#task{
+    width: 60%;
+    height: 35px;
+}
+h1{
+    margin-top: 30px;
+    text-align: center;
+}
+#tasks{
+    width: 60%;
+    height: 75vh;
+    background-color: darkslategray;
+    border-radius: 25px;
+    overflow-y: auto;
+    display: inline-block;
+    margin-left: auto;
+    margin-top: 20px;
+    padding: 20px;
+}
+#tasks::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+}
+
+#tasks::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background-color: #333333;
+}
+
+#tasks::-webkit-scrollbar-thumb:hover {
+    background-color: #555555;
+}
+
+#tasks::-webkit-scrollbar-track {
+    background-color: black;
+}
+   
+
+h2{
+    font-size: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes top {
+    0%{
+        opacity: O;
+        transform: translateY(-100px);
+    }
+    80%{
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes down {
+    0%{
+        opacity: O;
+        transform: translateY(50px);
+    }
+    80%{
+        transform: translateY(-8px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes left {
+    0%{
+        opacity: O;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes right {
+    0%{
+        opacity: O;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+#just{
+    animation: left 2s;
+}
+#doit{
+    animation: right 2s;
+}
+footer{
+    border-top: 3px white solid;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    opacity: 0.5;
+}
+@media screen and (max-width:1000px){
+    main{
+        display: block;
+        margin-top: 30px;
+    }
+    #input{
+        display: block;
+        margin: 10px auto;
+        width: 100%;
+        margin-left: unset;
+    }
+    #tasks{
+        display: block;
+        margin: 20px auto;
+        overflow-y: auto;
+        width: 90%;
+    
+    }
+    body{
+        overflow-y: scroll;
+        position: unset;
+        width: unset;
+        margin: 0 auto;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
